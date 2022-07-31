@@ -1,6 +1,7 @@
 .navigation {
   height: 60px;
-  background-color: lightgrey;
+  background-color: var(--color-bg-secondary);
+  color: var(--color-secondary);
 }
 
 .wrapper {
@@ -17,8 +18,23 @@
   font-weight: bold;
 }
 
+.main__link {
+  font-size: 20px;
+  font-weight: bold;
+  color: var(--color-secondary);
+}
+
+.link:hover {
+  box-shadow: var(--box-shadow);
+}
+
 .link {
   margin-left: 30px;
   font-size: 20px;
   font-weight: bold;
+  color: var(--color-secondary);
+}
+
+.link:hover {
+  box-shadow: var(--box-shadow);
 }

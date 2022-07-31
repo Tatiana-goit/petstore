@@ -6,7 +6,7 @@ export default function Navigation() {
   return (
     <nav className={s.navigation}>
         <div className={s.wrapper}>
-        <Link className={s.link} to="/">Home Page</Link>
+        <Link className={s.main__link} to="/">Home Page</Link>
         <span className={s.links__list}>
             <Link className={s.link} to="/personal">My Page</Link>
             <Link className={s.link} to="/login">Login</Link>

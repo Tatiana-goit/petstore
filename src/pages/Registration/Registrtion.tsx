@@ -1,7 +1,10 @@
 import React from 'react'
+import Container from '../../components/Container/Container'
 
 export default function Registration() {
   return (
-    <div>Registaration</div>
+    <Container>
+      <div>Registaration</div>
+    </Container>
   )
 }

@@ -1,7 +1,10 @@
 import React from 'react'
+import Container from '../../components/Container/Container'
 
 export default function HomePage() {
   return (
-    <div>HomePage</div>
+    <Container>
+      <div>HomePage</div>
+    </Container>
   )
 }

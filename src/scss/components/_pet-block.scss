@@ -11,6 +11,8 @@
 
   &__image {
     width: 260px;
+    height: 280px;
+    object-fit: contain;
   }
 
   &__title {
@@ -52,6 +54,7 @@
     }
   }
 
+
   &__bottom {
     display: flex;
     align-items: center;
@@ -64,5 +67,20 @@
     font-size: 22px;
     line-height: 27px;
     letter-spacing: 0.015em;
+  }
+
+  &__button--add {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__add {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+  &__count {
+    padding: 1px;
   }
 }

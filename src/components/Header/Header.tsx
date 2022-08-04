@@ -1,11 +1,12 @@
 import React from 'react'
+import logo from "../../assets/images/hamster-logo.svg"
 
 export default function Header() {
   return (
     <div className="header">
       <div className="container">
         <div className="header__logo">
-          <img width="38" src="./img/pet.svg" alt="Pet logo" />
+          <img width="38" src={logo} alt="Pet logo" />
           <div>
             <h1>Pets</h1>
             <p>find a friend</p>

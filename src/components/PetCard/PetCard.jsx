@@ -1,35 +1,53 @@
 import React from 'react'
 import { useState } from 'react'
 
-export default function PetCard({ title, price }) {
+export default function PetCard({ id, title, image, price, genders, colors }) {
   const [petCount, setPetCount] = useState(0)
+  const [activeGender, setActiveGender] = useState(0)
+  const [activeColor, setActiveColor] = useState(0)
 
-  const onClickAdd=()=> {
-    setPetCount(petCount+1)
+  const onClickAdd = () => {
+    setPetCount(petCount + 1)
   }
   return (
     <div className="pet-block">
       <img
         className="pet-block__image"
-        src="https://goodzoo.com.ua/photos/offers/1fe37b820423011eba054bf09780e3b46.jpg"
+        src={image}
         alt="Humster"
       />
       <h4 className="pet-block__title">{title}</h4>
       <div className="pet-block__selector">
         <ul>
-          <li className="active">male</li>
-          <li>female</li>
+          {genders.map((gender, index) => (
+            <li
+              key={index}
+              onClick={() => setActiveGender(index)}
+              className={activeGender === index ? 'active' : ''}
+            >
+              {gender}
+            </li>
+          ))}
         </ul>
         <ul>
-          <li className="active">grey</li>
-          <li>gold</li>
-          <li>white</li>
+          {colors.map((color, index)  => (
+            <li
+              key={index}
+              onClick={() => setActiveColor(index)}
+              className={activeColor === index ? 'active' : ''}
+            >
+              {color}
+            </li>
+          ))}
         </ul>
       </div>
       <div className="pet-block__bottom">
         <div className="pet-block__price">от {price} $</div>
-        <div onClick={onClickAdd} className="button button--outline button--add">
-          <svg
+        <div
+          onClick={onClickAdd}
+          className="button button--outline button--add pet-block__button--add"
+        >
+          <svg 
             width="12"
             height="12"
             viewBox="0 0 12 12"
@@ -41,8 +59,8 @@ export default function PetCard({ title, price }) {
               fill="grey"
             />
           </svg>
-          <span>ADD</span>
-          <i>{petCount}</i>
+          <span className="pet-block__add">ADD</span>
+          <i className="pet-block__count">{petCount}</i>
         </div>
       </div>
     </div>

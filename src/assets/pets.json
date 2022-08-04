@@ -1,0 +1,82 @@
+[
+  {
+    "id": 0,
+    "image": "https://goodzoo.com.ua/photos/offers/1fe37b820423011eba054bf09780e3b46.jpg",
+    "title": "Djungarian hamster",
+    "genders": ["male","female"],
+    "colors": ["grey","gold","white"],
+    "price": 3,
+    "category": 0,
+    "rating": 1
+  },
+  {
+    "id": 1,
+    "image": "https://goodzoo.com.ua/photos/offers/15c5882a0423011eba4414bc283a679f2.jpg",
+    "title": "Syrian hamster",
+    "genders": ["male"],
+    "colors": ["gold","white"],
+    "price": 4,
+    "category": 0,
+    "rating": 2
+  },
+  {
+    "id": 2,
+    "image": "https://goodzoo.com.ua/photos/offers/1a4cc7da0452a11eba4414bc283a679f2.jpg",
+    "title": "Robkovsky's hamster",
+    "genders": ["male","female"],
+    "colors": ["grey","gold","black"],
+    "price": 10,
+    "category": 0,
+    "rating": 3
+  },
+  {
+    "id":3,
+    "image": "https://goodzoo.com.ua/photos/offers/1fe37b820423011eba054bf09780e3b46.jpg",
+    "title": "Campbell's hamster",
+    "genders": ["female"],
+    "colors": ["grey","white"],
+    "price": 8,
+    "category": 0,
+    "rating": 5
+  },
+  {
+    "id": 4,
+    "image": "https://goodzoo.com.ua/photos/offers/1a4cc7da0452a11eba4414bc283a679f2.jpg",
+    "title": "Angora hamster",
+    "genders": ["male","female"],
+    "colors": ["grey","gold","white"],
+    "price": 12,
+    "category": 0,
+    "rating": 4
+  },
+  {
+    "id": 5,
+    "image": "https://goodzoo.com.ua/photos/offers/1fe37b820423011eba054bf09780e3b46.jpg",
+    "title": "Sungur hamster",
+    "genders": ["male","female"],
+    "colors": ["grey","black","white"],
+    "price": 6,
+    "category": 0,
+    "rating": 8
+  },
+  {
+    "id": 6,
+    "image": "https://goodzoo.com.ua/photos/offers/19dd902c0452a11eba054bf09780e3b46.jpg",
+    "title": "Field hamster",
+    "genders": ["male","female"],
+    "colors": ["grey","gold","white"],
+    "price": 2,
+    "category": 0,
+    "rating": 7
+  },
+  {
+    "id": 7,
+    "image": "https://goodzoo.com.ua/photos/offers/1fe37b820423011eba054bf09780e3b46.jpg",
+    "title": "Chinese hamster",
+    "genders": ["male"],
+    "colors": ["grey","black"],
+    "price": 44,
+    "category": 0,
+    "rating": 6
+  }
+]

@@ -7,12 +7,14 @@ import Search from '../Search/Search'
 import { useState, useEffect, useContext } from 'react'
 import Sceleton from '../PetCard/Sceleton'
 import { SearchContext } from '../../App'
+import Pagination from '../Pagination/Pagination'
 
 export default function Content() {
   const { searchValue } = useContext(SearchContext)
   const [items, setItems] = useState([])
   const [isLoading, setIsLoading] = useState(true)
   const [categoryId, setCategoryId] = useState(0)
+  const [currentPage, setCurrentPage] = useState(1)
   const [sortType, setSortType] = useState({
     name: 'popularity',
     sortProperty: 'rating',
@@ -25,9 +27,9 @@ export default function Content() {
     const order = sortType.sortProperty.includes('-') ? 'asc' : 'desc'
     const category = categoryId > 0 ? `category=${categoryId}` : ''
     const search = searchValue ? `&search=${searchValue}` : ''
-    
+
     fetch(
-      `https://62ecf1bba785760e6760a342.mockapi.io/items?${category}&sortBy=${sortBy}&order=${order}${search}`,
+      `https://62ecf1bba785760e6760a342.mockapi.io/items?page=${currentPage}&limit=8&${category}&sortBy=${sortBy}&order=${order}${search}`,
     )
       .then((res) => res.json())
       .then((arr) => {
@@ -35,7 +37,7 @@ export default function Content() {
         setIsLoading(false)
       })
     window.scrollTo(0, 0)
-  }, [categoryId, sortType, searchValue])
+  }, [categoryId, sortType, searchValue, currentPage])
 
   const pets = items.map((obj) => <PetCard key={obj.id} {...obj} />)
 
@@ -55,6 +57,7 @@ export default function Content() {
           </div>
           <h2 className="content__title">All pets</h2>
           <div className="content__items">{isLoading ? sceleton : pets}</div>
+          <Pagination onChangePage={(number) => setCurrentPage(number)} />
         </div>
       </div>
     </div>

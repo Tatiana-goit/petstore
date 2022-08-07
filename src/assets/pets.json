@@ -7,7 +7,7 @@
     "colors": ["grey","gold","white"],
     "price": 3,
     "category": 2,
-    "rating": 1
+    "rating": 10
   },
   {
     "id": 1,
@@ -17,7 +17,7 @@
     "colors": ["gold","white"],
     "price": 4,
     "category": 3,
-    "rating": 2
+    "rating": 9
   },
   {
     "id": 2,
@@ -27,7 +27,7 @@
     "colors": ["grey","gold","black"],
     "price": 10,
     "category": 1,
-    "rating": 3
+    "rating": 7
   },
   {
     "id":3,
@@ -37,7 +37,7 @@
     "colors": ["grey","white"],
     "price": 8,
     "category": 2,
-    "rating": 5
+    "rating": 8
   },
   {
     "id": 4,
@@ -47,7 +47,7 @@
     "colors": ["grey","gold","white"],
     "price": 12,
     "category": 3,
-    "rating": 4
+    "rating": 6
   },
   {
     "id": 5,
@@ -57,7 +57,7 @@
     "colors": ["grey","black","white"],
     "price": 6,
     "category": 2,
-    "rating": 8
+    "rating": 4
   },
   {
     "id": 6,
@@ -67,7 +67,7 @@
     "colors": ["grey","gold","white"],
     "price": 2,
     "category": 3,
-    "rating": 7
+    "rating": 5
   },
   {
     "id": 7,
@@ -77,6 +77,26 @@
     "colors": ["grey","black"],
     "price": 44,
     "category": 2,
-    "rating": 6
+    "rating": 3
+  },
+  {
+    "id": 8,
+    "image": "https://goodzoo.com.ua/photos/offers/1a4cc7da0452a11eba4414bc283a679f2.jpg",
+    "title": "Newton's hamster",
+    "genders": ["male","female"],
+    "colors": ["white","black"],
+    "price": 29,
+    "category": 3,
+    "rating": 1
+  },
+  {
+    "id": 9,
+    "image": "https://goodzoo.com.ua/photos/offers/1fe37b820423011eba054bf09780e3b46.jpg",
+    "title": "Short-tailed hamster",
+    "genders": ["male"],
+    "colors": ["grey","black"],
+    "price": 16,
+    "category": 2,
+    "rating": 2
   }
 ]

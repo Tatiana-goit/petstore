@@ -1,0 +1,33 @@
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo_image {
+  margin-right: 15px;
+}
+
+.title {
+  color: var(--color-secondary);
+  font-size: 24px;
+  letter-spacing: 1%;
+  text-transform: uppercase;
+  font-weight: 800;
+}
+
+.text {
+  color: var(--color-secondary);  
+  font-size: 18px;
+  font-weight: bold;
+}
+
+@media (max-width: 1060px) {
+  .title {
+    font-size: 20px;   
+  }
+  .text {
+    font-size: 14px;   
+  }
+}
+

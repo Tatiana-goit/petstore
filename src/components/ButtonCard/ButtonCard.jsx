@@ -1,19 +1,11 @@
 import React from 'react'
-import logo from "../../assets/images/hamster-logo.svg"
+import {Link} from "react-router-dom"
 
-export default function Header() {
+export default function ButtonCard() {
   return (
-    <div className="header">
-      <div className="container">
-        <div className="header__logo">
-          <img width="38" src={logo} alt="Pet logo" />
-          <div>
-            <h1>Pets</h1>
-            <p>find a friend</p>
-          </div>
-        </div>
-        <div className="header__cart">
-          <a href="/cart.html" className="button button--cart">
+    <>
+    {/* <Link to="/personal"> */}
+        <div className="header__cart button button--cart">
             <span>3 $</span>
             <div className="button__delimiter"></div>
             <svg
@@ -46,9 +38,8 @@ export default function Header() {
               />
             </svg>
             <span>3</span>
-          </a>
         </div>
-      </div>
-    </div>
+        {/* </Link> */}
+    </>
   )
 }

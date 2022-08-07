@@ -6,7 +6,7 @@
 
     li {
       background-color: #f9f9f9;
-      padding: 13px 30px;
+      padding: 13px 27px;
       border-radius: 30px;
       margin-right: 10px;
       font-weight: bold;
@@ -26,6 +26,10 @@
         background-color: var(--color-bg-secondary);
         color: var(--color-secondary);
       }
+    }
+
+    @media (max-width: 768px) {
+      margin-top: 20px;
     }
   }
 }

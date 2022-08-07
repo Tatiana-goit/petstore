@@ -132,8 +132,10 @@
   &--cart {
     display: flex;
     align-items: center;
+    margin-right: 20px;
     line-height: 23px;
     padding: 12px 25px;
+    border: 1px solid var(--color-secondary);
 
     svg {
       margin-right: 8px;

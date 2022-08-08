@@ -1,4 +1,8 @@
 import React from 'react'
+import axios from 'axios'
+import { useSelector, useDispatch } from 'react-redux'
+import { setCategoryId } from '../../redux/slices/filterSlice'
+
 import Category from '../Category/Category'
 import PetCard from '../PetCard/PetCard'
 import Sort from '../Sort/Sort'
@@ -10,32 +14,45 @@ import { SearchContext } from '../../App'
 import Pagination from '../Pagination/Pagination'
 
 export default function Content() {
+  const dispatch = useDispatch()
+  const categoryId = useSelector((state) => state.filter.categoryId)
+  const sortType = useSelector((state) => state.filter.sort.sortProperty)
+
   const { searchValue } = useContext(SearchContext)
   const [items, setItems] = useState([])
   const [isLoading, setIsLoading] = useState(true)
-  const [categoryId, setCategoryId] = useState(0)
   const [currentPage, setCurrentPage] = useState(1)
-  const [sortType, setSortType] = useState({
-    name: 'popularity',
-    sortProperty: 'rating',
-  })
+
+  const onChangeCategory = (id) => {
+    dispatch(setCategoryId(id))
+  }
 
   useEffect(() => {
     setIsLoading(true)
 
-    const sortBy = sortType.sortProperty.replace('-', '')
-    const order = sortType.sortProperty.includes('-') ? 'asc' : 'desc'
+    const sortBy = sortType.replace('-', '')
+    const order = sortType.includes('-') ? 'asc' : 'desc'
     const category = categoryId > 0 ? `category=${categoryId}` : ''
     const search = searchValue ? `&search=${searchValue}` : ''
 
-    fetch(
-      `https://62ecf1bba785760e6760a342.mockapi.io/items?page=${currentPage}&limit=8&${category}&sortBy=${sortBy}&order=${order}${search}`,
-    )
-      .then((res) => res.json())
-      .then((arr) => {
-        setItems(arr)
+    // fetch(
+    //   `https://62ecf1bba785760e6760a342.mockapi.io/items?page=${currentPage}&limit=8&${category}&sortBy=${sortBy}&order=${order}${search}`,
+    // )
+    //   .then((res) => res.json())
+    //   .then((arr) => {
+    //     setItems(arr)
+    //     setIsLoading(false)
+    //   })
+
+    axios
+      .get(
+        `https://62ecf1bba785760e6760a342.mockapi.io/items?page=${currentPage}&limit=8&${category}&sortBy=${sortBy}&order=${order}${search}`,
+      )
+      .then((res) => {
+        setItems(res.data)
         setIsLoading(false)
       })
+
     window.scrollTo(0, 0)
   }, [categoryId, sortType, searchValue, currentPage])
 
@@ -48,12 +65,9 @@ export default function Content() {
       <div className="content">
         <div className="container">
           <div className="content__top">
-            <Category
-              value={categoryId}
-              onChangeCategory={(i) => setCategoryId(i)}
-            />
+            <Category value={categoryId} onChangeCategory={onChangeCategory} />
             <Search />
-            <Sort value={sortType} onChangeSort={(i) => setSortType(i)} />
+            <Sort />
           </div>
           <h2 className="content__title">All pets</h2>
           <div className="content__items">{isLoading ? sceleton : pets}</div>

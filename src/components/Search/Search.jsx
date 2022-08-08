@@ -1,10 +1,32 @@
 import React from 'react'
-import { useContext } from 'react'
+import debounce from 'lodash.debounce'
+import { useState, useContext, useRef, useCallback } from 'react'
 import { SearchContext } from '../../App'
 import s from './Search.module.scss'
 
 export default function Search() {
+  const [value, setValue] = useState('')
   const { searchValue, setSearchValue } = useContext(SearchContext)
+  const inputRef = useRef()
+
+  const onClickClear = () => {
+    setSearchValue('')
+    setValue('')
+    inputRef.current.focus()
+  }
+
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  const updateSearchValue = useCallback(
+    debounce((str) => {
+      setSearchValue(str)
+    }, 1000),
+    [],
+  )
+
+  const onChangeInput = (event) => {
+    setValue(event.target.value)
+    updateSearchValue(event.target.value)
+  }
 
   return (
     <div className={s.wrapper}>
@@ -43,17 +65,16 @@ export default function Search() {
         />
       </svg>
       <input
-        value={searchValue}
-        onChange={(event) => {
-          setSearchValue(event.target.value)
-        }}
+        ref={inputRef}
+        value={value}
+        onChange={onChangeInput}
         className={s.input}
         type="text"
         placeholder="Search pet ..."
       />
       {searchValue && (
         <svg
-          onClick={()=>setSearchValue('')}
+          onClick={onClickClear}
           className={s.close}
           fill="none"
           height="24"

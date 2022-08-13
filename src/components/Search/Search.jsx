@@ -1,16 +1,17 @@
 import React from 'react'
 import debounce from 'lodash.debounce'
-import { useState, useContext, useRef, useCallback } from 'react'
-import { SearchContext } from '../../App'
+import { useDispatch } from 'react-redux'
+import { useState, useRef, useCallback } from 'react'
+import { setSearchValue } from '../../redux/slices/filterSlice'
 import s from './Search.module.scss'
 
 export default function Search() {
+  const dispatch = useDispatch()
   const [value, setValue] = useState('')
-  const { searchValue, setSearchValue } = useContext(SearchContext)
   const inputRef = useRef()
 
   const onClickClear = () => {
-    setSearchValue('')
+    dispatch(setSearchValue(''))
     setValue('')
     inputRef.current.focus()
   }
@@ -18,7 +19,7 @@ export default function Search() {
   // eslint-disable-next-line react-hooks/exhaustive-deps
   const updateSearchValue = useCallback(
     debounce((str) => {
-      setSearchValue(str)
+      dispatch(setSearchValue(str))
     }, 1000),
     [],
   )
@@ -72,7 +73,7 @@ export default function Search() {
         type="text"
         placeholder="Search pet ..."
       />
-      {searchValue && (
+      {value && (
         <svg
           onClick={onClickClear}
           className={s.close}

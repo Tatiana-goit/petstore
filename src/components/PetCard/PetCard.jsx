@@ -1,14 +1,33 @@
 import React from 'react'
 import { useState } from 'react'
+import { useDispatch, useSelector } from 'react-redux'
+import { addItem, selectCartItemById } from '../../redux/slices/cartSlice'
+
+const typeNames = ['male', 'female']
 
 export default function PetCard({ id, title, image, price, genders, colors }) {
+  const dispatch = useDispatch()
+  const cartItem = useSelector(selectCartItemById(id))
+
   const [petCount, setPetCount] = useState(0)
   const [activeGender, setActiveGender] = useState(0)
   const [activeColor, setActiveColor] = useState(0)
 
+  const addedCount = cartItem ? cartItem.count : 0
+
   const onClickAdd = () => {
     setPetCount(petCount + 1)
+    const item = {
+      id,
+      title,
+      price,
+      image,
+      type: typeNames[activeGender],
+      color: colors[activeColor],
+    }
+    dispatch(addItem(item))
   }
+
   return (
     <div className="pet-block-wrapper">
       <div className="pet-block">
@@ -57,7 +76,7 @@ export default function PetCard({ id, title, image, price, genders, colors }) {
               />
             </svg>
             <span className="pet-block__add">ADD</span>
-            <i className="pet-block__count">{petCount}</i>
+            {addedCount > 0 && <i className="pet-block__count">{addedCount}</i>}
           </div>
         </div>
       </div>

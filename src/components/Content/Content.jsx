@@ -1,28 +1,23 @@
-import React from 'react'
-import axios from 'axios'
 import { useSelector, useDispatch } from 'react-redux'
+import { selectFilter } from '../../redux/slices/filterSlice'
 import { setCategoryId, setCurrentPage } from '../../redux/slices/filterSlice'
 
 import Category from '../Category/Category'
 import PetCard from '../PetCard/PetCard'
 import Sort from '../Sort/Sort'
 import Search from '../Search/Search'
-// import pets from '../../assets/pets.json'
-import { useState, useEffect, useContext } from 'react'
+import { useEffect } from 'react'
 import Sceleton from '../PetCard/Sceleton'
-import { SearchContext } from '../../App'
 import Pagination from '../Pagination/Pagination'
+import { fetchPet, selectPetData } from '../../redux/slices/petSlice'
 
 export default function Content() {
   const dispatch = useDispatch()
-  const categoryId = useSelector((state) => state.filter.categoryId)
-  const sortType = useSelector((state) => state.filter.sort.sortProperty)
-  const currentPage = useSelector((state) => state.filter.currentPage)
-
-  const { searchValue } = useContext(SearchContext)
-  const [items, setItems] = useState([])
-  const [isLoading, setIsLoading] = useState(true)
-
+  const { items, status } = useSelector(selectPetData)
+  const { categoryId, sort, currentPage, searchValue } = useSelector(
+    selectFilter,
+  )
+  
   const onChangeCategory = (id) => {
     dispatch(setCategoryId(id))
   }
@@ -32,24 +27,17 @@ export default function Content() {
   }
 
   useEffect(() => {
-    setIsLoading(true)
-
-    const sortBy = sortType.replace('-', '')
-    const order = sortType.includes('-') ? 'asc' : 'desc'
+    const sortBy = sort.sortProperty.replace('-', '')
+    const order = sort.sortProperty.includes('-') ? 'asc' : 'desc'
     const category = categoryId > 0 ? `category=${categoryId}` : ''
     const search = searchValue ? `&search=${searchValue}` : ''
 
-    axios
-      .get(
-        `https://62ecf1bba785760e6760a342.mockapi.io/items?page=${currentPage}&limit=8&${category}&sortBy=${sortBy}&order=${order}${search}`,
-      )
-      .then((res) => {
-        setItems(res.data)
-        setIsLoading(false)
-      })
+    dispatch(fetchPet({ sortBy, order, category, search, currentPage }))
 
     window.scrollTo(0, 0)
-  }, [categoryId, sortType, searchValue, currentPage])
+
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [categoryId, sort, searchValue, currentPage])
 
   const pets = items.map((obj) => <PetCard key={obj.id} {...obj} />)
 
@@ -65,7 +53,20 @@ export default function Content() {
             <Sort />
           </div>
           <h2 className="content__title">All pets</h2>
-          <div className="content__items">{isLoading ? sceleton : pets}</div>
+          {status === 'error' ? (
+            <div className="content__error-info">
+              <h2>Error</h2>
+              <p>
+                Unfortunately, it wasn't possible to get pets. Please try again
+                later
+              </p>
+            </div>
+          ) : (
+            <div className="content__items">
+              {status === 'loading' ? sceleton : pets}
+            </div>
+          )}
+
           <Pagination currentPage={currentPage} onChangePage={onChangePage} />
         </div>
       </div>

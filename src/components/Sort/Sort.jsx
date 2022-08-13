@@ -6,8 +6,8 @@ import { selectSort, setSort } from '../../redux/slices/filterSlice'
 
 const list = [
   { name: 'popularity ', sortProperty: '-rating' },
-  { name: 'price (возр)', sortProperty: '-price' },
-  { name: 'price (убыв)', sortProperty: 'price' },
+  { name: 'price ↑', sortProperty: '-price' },
+  { name: 'price ↓', sortProperty: 'price' },
   { name: 'A-Z', sortProperty: '-title' },
   { name: 'Z-A', sortProperty: 'title' },
 ]

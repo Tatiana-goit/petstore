@@ -10,9 +10,9 @@ export default function Navigation() {
         <div className={s.wrapper}>
         <Link className={s.main__link} to="/"><Logo/></Link>
         <span className={s.links__list}>
-          <Link className={s.link} to="/personal"><ButtonCard/>My Page</Link>
-          <Link className={[s.link, s.link_display].join(' ')} to="/login">Login</Link>
-          <Link className={[s.link, s.link_display].join(' ')} to="/registration">Registration</Link>
+          <Link className={s.link} to="/personal"><ButtonCard/><span className={s.text}>My Page</span></Link>
+          <Link className={[s.link, s.link_display].join(' ')} to="/login"><span className={s.text}>Login</span></Link>
+          <Link className={[s.link, s.link_display].join(' ')} to="/registration"><span className={s.text}>Registration</span></Link>
         </span>
         </div>
     </nav>

@@ -45,12 +45,11 @@
   }
 
   &--black {
-    background-color: var(--color-primary);
-
-    &:hover,
-    &:active {
-      background-color: lighten( #ac1313, $amount: 10);
-    }
+    padding: 12px 0 14px;
+    width: 180px;
+    margin: 0 auto;
+    font-weight: 600;
+    font-size: 18px
   }
 
   &--outline {

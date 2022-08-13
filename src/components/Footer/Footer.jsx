@@ -7,9 +7,9 @@ export default function Footer() {
       <footer className={s.footer}>
         <div className={s.footer__contener}>
           <div className={s.footer__left}>
-            <h2 className={s.visuallyHidden}>Контакты</h2>
+            <h2 className={s.visuallyHidden}>Contacts</h2>
             <p className={s.logo}>
-              <span className={s.logo}>Web</span>Studio{' '}
+              <span className={s.logo}>Pet</span>Store{' '}
             </p>
             <address className={s.contact}>
               <ul className={s.contact__list}>
@@ -21,7 +21,7 @@ export default function Footer() {
                     rel="noopener noroferrer"
                   >
                     {' '}
-                    г. Киев, пр-т Леси Украинки, 26{' '}
+                    {' '}
                   </p>
                 </li>
                 <li className={s.contact__listItem}>
@@ -45,7 +45,7 @@ export default function Footer() {
           </div>
 
           <div className={s.footer__center}>
-            <p className={s.footer__title}>Присоединяйтесь</p>
+            <p className={s.footer__title}>Join us</p>
             <ul className={s.slinks}>
               <li className={s.links__item}>
                 <p className={s.links__link}>
@@ -80,7 +80,7 @@ export default function Footer() {
 
           <div className={s.footer__right}>
             <form action="#">
-              <p className={s.footer__title}>Подпишитесь на рассылку</p>
+              <p className={s.footer__title}>Subscribe to newsletter</p>
               <div className={s.footer__form}>
                 <input
                   type="email"
@@ -89,7 +89,7 @@ export default function Footer() {
                   placeholder="E-mail"
                 ></input>
                 <button type="submit" className={s.button}>
-                  Подписаться
+                Subscribe
                   <svg className={s.footer__formButton}>
                     <use href="./images/sprite.svg#send"></use>
                   </svg>

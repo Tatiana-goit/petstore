@@ -9,11 +9,11 @@ const Toast = Swal.mixin({
   },
   showConfirmButton: false,
   timerProgressBar: true,
-  width: 480,
+  width: 420,
 });
 
 export class Notify {
-  static async error(title, text, timer = 3000) {
+  static async error(title, text, timer = 2000) {
     await Toast.fire({
       icon: 'error',
       timer,
@@ -22,7 +22,7 @@ export class Notify {
     });
   }
 
-  static async success(title, text, timer = 3000) {
+  static async success(title, text, timer = 2000) {
     await Toast.fire({
       icon: 'success',
       timer,
@@ -31,7 +31,7 @@ export class Notify {
     });
   }
 
-  static async warning(title, text, timer = 3000) {
+  static async warning(title, text, timer = 2000) {
     await Toast.fire({
       icon: 'warning',
       timer,
@@ -40,7 +40,7 @@ export class Notify {
     });
   }
 
-  static async info(title, message, timer = 3000) {
+  static async info(title, message, timer = 2000) {
     await Toast.fire({
       icon: 'info',
       timer,

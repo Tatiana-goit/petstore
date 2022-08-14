@@ -1,9 +1,9 @@
 import React from 'react'
-import Cart from '../../components/Cart/Cart'
+import MainContent from '../../components/MainContent/MainContent'
 
 export default function Personal() {
   return (
-    <div><Cart/></div>
+    <div><MainContent/></div>
   )
 }
 

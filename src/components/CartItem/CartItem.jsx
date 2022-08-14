@@ -40,9 +40,8 @@ export default function CartItem({
         <p>{type}, {color}</p>
       </div>
       <div className="cart__item-count">
-        <div className="button button--outline button--circle cart__item-count-minus">
+        <div onClick={onClickMinus} className="button button--outline button--circle cart__item-count-minus">
           <svg
-            onClick={onClickMinus}
             width="10"
             height="10"
             viewBox="0 0 10 10"
@@ -60,9 +59,8 @@ export default function CartItem({
           </svg>
         </div>
         <b>{count}</b>
-        <div className="button button--outline button--circle cart__item-count-plus">
+        <div  onClick={onClickPlus} className="button button--outline button--circle cart__item-count-plus">
           <svg
-            onClick={onClickPlus}
             width="10"
             height="10"
             viewBox="0 0 10 10"
@@ -84,9 +82,8 @@ export default function CartItem({
         <b>{price * count} $</b>
       </div>
       <div className="cart__item-remove">
-        <div className="button button--outline button--circle">
+        <div onClick={onClickRemove} className="button button--outline button--circle">
           <svg
-            onClick={onClickRemove}
             width="10"
             height="10"
             viewBox="0 0 10 10"

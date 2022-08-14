@@ -22,7 +22,7 @@ export const login = createAsyncThunk(
       const result = await userApi.login(user);
       Notify.success(
         "Login successful!\n",
-        `Welcome back, ${result.user.name}!`,
+        `Welcome back, ${result.user.name} !`,
         3000
       );
       return result;

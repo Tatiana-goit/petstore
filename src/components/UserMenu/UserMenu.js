@@ -5,9 +5,6 @@ import { logout } from '../../redux/auth/auth-operation'
 import { Link } from 'react-router-dom'
 import ButtonCard from '../ButtonCard/ButtonCard'
 import ExitToAppIcon from '@mui/icons-material/ExitToApp'
-// import { getIsAuth } from '../../redux/auth/auth-selector'
-// import HomePage from "../../pages/HomePage/HomePage"
-// import ErrorLoadingPage from "../../pages/ErrorLoadingPage/ErrorLoadingPage"
 import s from './UserMenu.module.scss'
 
 export default function UserMenu() {
@@ -16,8 +13,6 @@ export default function UserMenu() {
   const handleLogout = () => {
     dispatch(logout())
   }
-
-  // const isAuth = useSelector(getIsAuth)
 
   return (
     <div>
@@ -36,7 +31,6 @@ export default function UserMenu() {
           </button>
         </div>
       </div>
-      {/* {isAuth ? <HomePage /> : <ErrorLoadingPage />} */}
     </div>
   )
 }

@@ -27,6 +27,10 @@ export default function CartItem({
     Notify.success('Deleted successfully')
   }
 
+  const onClickRemoveNull = () => {
+    dispatch(removeItem(id))
+  }
+
   return (
     <div className="cart__item">
       <div className="cart__item-img">
@@ -60,7 +64,7 @@ export default function CartItem({
             />
           </svg>
         </div>
-        <b>{count}</b>
+        {count === 0 ? onClickRemoveNull() : <b>{count}</b>}
         <div
           onClick={onClickPlus}
           className="button button--outline button--circle cart__item-count-plus"

@@ -1,18 +1,3 @@
-// import { configureStore } from '@reduxjs/toolkit'
-// import filter from './slices/filterSlice'
-// import cart from './slices/cartSlice'
-// import pet from './slices/petSlice'
-// import auth from "./auth/auth-slice"
-
-// export const store = configureStore({
-//   reducer: {
-//     filter,
-//     cart,
-//     pet,
-//     auth,
-//   },
-// })
-
 import { configureStore } from '@reduxjs/toolkit'
 import authReducer from './auth/auth-slice'
 import filter from './slices/filterSlice'
@@ -37,15 +22,23 @@ const persistConfig = {
   storage,
   whitelist: ['token'],
 }
+const persistConfigCart = {
+  key: 'cart',
+  version: 1,
+  storage,
+  whitelist: ['items', 'totalPrice'],
+}
 
-const persisteContactReducer = persistReducer(persistConfig, authReducer)
+const cartReducer = persistReducer(persistConfigCart, cart)
+
+const persisteAuthReducer = persistReducer(persistConfig, authReducer)
 
 export const store = configureStore({
   reducer: {
     filter,
-    cart,
+    cart: cartReducer,
     pet,
-    auth: persisteContactReducer,
+    auth: persisteAuthReducer,
   },
   middleware: (getDefaultMiddleware) =>
     getDefaultMiddleware({

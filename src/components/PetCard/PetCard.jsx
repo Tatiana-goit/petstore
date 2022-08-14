@@ -58,7 +58,7 @@ export default function PetCard({ id, title, image, price, genders, colors }) {
           </ul>
         </div>
         <div className="pet-block__bottom">
-          <div className="pet-block__price">от {price} $</div>
+          <div className="pet-block__price">{price} $</div>
           <div
             onClick={onClickAdd}
             className="button button--outline button--add pet-block__button--add"

@@ -7,8 +7,8 @@ export default function Logo() {
     <div className={s.logo}>
       <img className={s.logo_image} width="38" src={logo} alt="Pet logo" />
       <div>
-        <h1 className={s.title}>Pets</h1>
-        <p className={s.text}>find a friend</p>
+        <h1 className={s.title}>Humsters</h1>
+        <p className={s.text}>find friends</p>
       </div>
     </div>
   )

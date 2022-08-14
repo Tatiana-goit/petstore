@@ -112,7 +112,7 @@ export default function Cart() {
               <div className="cart__bottom-details">
                 <span>
                   {' '}
-                  All pets: <b>{totalCount}</b>{' '}
+                  All humsters: <b>{totalCount}</b>{' '}
                 </span>
                 <span>
                   {' '}

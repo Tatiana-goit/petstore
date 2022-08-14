@@ -63,10 +63,12 @@ export default function Content() {
           <h2 className="content__title">All pets</h2>
           {status === 'error' ? (
             <div className="content__error-info">
-              <h2>Error</h2>
-              <p>
-                Unfortunately, it wasn't possible to get pets. Please try again
-                later
+              <h2 className="content__error-title">Error</h2>
+              <p className="content__error-text">
+                Unfortunately, it wasn't possible to get humsters. 
+              </p>
+              <p className="content__error-text">
+              Please try again later
               </p>
             </div>
           ) : (

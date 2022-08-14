@@ -1,6 +1,6 @@
 import React from 'react'
 import { useDispatch } from 'react-redux'
-
+import { Notify } from '../../utils/notifications';
 import { addItem, minusItem, removeItem } from '../../redux/slices/cartSlice'
 
 export default function CartItem({
@@ -25,6 +25,8 @@ export default function CartItem({
   const onClickRemove = () => {
     if (window.confirm('Are you shure you want to delete?')) {
       dispatch(removeItem(id))
+      Notify.success('You have successfully removed');
+
     }
   }
 

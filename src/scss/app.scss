@@ -284,9 +284,6 @@
         }
 
         &:hover {
-          background-color: darken(#f6f6f6, $amount: 90);
-          border-color: darken(#f6f6f6, $amount: 90);
-
           span {
             color: var(--color-secondary-grey);
           }
@@ -339,4 +336,49 @@
       margin: 45px auto 60px;
     }
   }
+}
+
+.colored-toast.swal2-icon-success {
+  background-color: #ffffff !important;
+}
+
+.colored-toast.swal2-icon-error {
+  background-color: #f27474 !important;
+}
+
+.colored-toast.swal2-icon-warning {
+  background-color: #ffd561 !important;
+}
+
+.colored-toast.swal2-icon-info {
+  background-color:  #bcb8b8 !important;
+}
+
+.colored-toast.swal2-icon-question {
+  background-color: #87adbd !important;
+}
+
+.colored-toast .swal2-title {
+  margin-top: 5px !important;
+  margin-bottom: 5px !important;
+
+  font-size: 20px !important;
+  color: rgb(72, 9, 9);
+}
+
+.colored-toast .swal2-close {
+  color:  rgb(72, 9, 9);
+}
+
+.colored-toast .swal2-content {
+  color:  rgb(72, 9, 9);
+}
+
+.colored-toast .swal2-html-container {
+  margin-top: 5px !important;
+  margin-bottom: 5px !important;
+
+  font-weight: 500 !important;
+  font-size: 16px !important;
+  color:  rgb(72, 9, 9);
 }

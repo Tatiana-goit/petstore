@@ -1,18 +1,23 @@
 import { Link } from 'react-router-dom'
 import { useSelector, useDispatch } from 'react-redux'
+import { useState } from 'react'
+import { Notify } from '../../utils/notifications'
 import CartItem from '../CartItem/CartItem'
 import { clearItems, selectCart } from '../../redux/slices/cartSlice'
 import CartEmpty from '../CartEmpty/CartEmpty'
+import ModalSuccess from '../ModalSuccess/ModalSuccess'
 
 export default function Cart() {
   const dispatch = useDispatch()
   const { totalPrice, items } = useSelector(selectCart)
+  const [modalActive, setModalActive] = useState(false)
 
   const totalCount = items.reduce((sum, item) => sum + item.count, 0)
 
   const onClickClear = () => {
     if (window.confirm('Do you want to empty cart?')) {
       dispatch(clearItems())
+      Notify.success('Your cart is empty')
     }
   }
 
@@ -134,13 +139,18 @@ export default function Cart() {
                       strokeLinejoin="round"
                     />
                   </svg>
-
                   <span>Back</span>
                 </Link>
-                <div className="button pay-btn">
+                <button
+                  onClick={() => setModalActive(true)}
+                  className="button pay-btn"
+                >
                   <span>Pay Now</span>
-                </div>
+                </button>
               </div>
+              {modalActive && (
+                <ModalSuccess active={modalActive} setActive={setModalActive} />
+              )}
             </div>
           </div>
         </div>

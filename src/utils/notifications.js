@@ -9,7 +9,7 @@ const Toast = Swal.mixin({
   },
   showConfirmButton: false,
   timerProgressBar: true,
-  width: 420,
+  width: 480,
 });
 
 export class Notify {

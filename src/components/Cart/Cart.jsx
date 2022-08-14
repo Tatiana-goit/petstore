@@ -15,10 +15,9 @@ export default function Cart() {
   const totalCount = items.reduce((sum, item) => sum + item.count, 0)
 
   const onClickClear = () => {
-    if (window.confirm('Do you want to empty cart?')) {
-      dispatch(clearItems())
+         dispatch(clearItems())
       Notify.success('Your cart is empty')
-    }
+
   }
 
   if (totalCount === 0) {

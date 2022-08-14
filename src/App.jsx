@@ -10,7 +10,8 @@ import PrivateRoute from './routes/PrivateRoute'
 import { useSelector, useDispatch } from 'react-redux'
 import { useEffect } from 'react'
 import { currentUser } from './redux/auth/auth-operation'
-// import Loader from './helpers/Loader/Loader';
+import {Loader} from './helpers/Loader/Loader'
+
 import {
   getIsAuth,
   getToken,
@@ -54,10 +55,9 @@ function App() {
       <Navigation />
 
       {isFetchCurrentUser ? (
-        // <Loader />
-        console.log('loader')
+        <Loader/>
       ) : (
-        <Suspense fallback={console.log('loader2')}>
+        <Suspense fallback={<Loader/>}>
           <Routes>
             <Route
               path="/"

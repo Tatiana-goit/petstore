@@ -2,6 +2,7 @@ import './scss/app.scss'
 import { Routes, Route } from 'react-router-dom'
 import Navigation from './components/Navigation/Navigation'
 import NotFound from './pages/NotFound/NotFound'
+import Footer from './components/Footer/Footer'
 
 import { lazy } from 'react'
 import { Suspense } from 'react'
@@ -10,7 +11,7 @@ import PrivateRoute from './routes/PrivateRoute'
 import { useSelector, useDispatch } from 'react-redux'
 import { useEffect } from 'react'
 import { currentUser } from './redux/auth/auth-operation'
-import {Loader} from './helpers/Loader/Loader'
+import { Loader } from './helpers/Loader/Loader'
 
 import {
   getIsAuth,
@@ -52,37 +53,42 @@ function App() {
 
   return (
     <div className="App">
-      <Navigation />
+      <div className="main_wrapper">
+        <Navigation />
 
-      {isFetchCurrentUser ? (
-        <Loader/>
-      ) : (
-        <Suspense fallback={<Loader/>}>
-          <Routes>
-            <Route
-              path="/"
-              element={<PublicRoute isAuth={isAuth} component={HomePage} />}
-            />
-            <Route
-              path="/personal"
-              element={<PrivateRoute isAuth={isAuth} component={Personal} />}
-            />
-             <Route
-              path="/cart"
-              element={<PrivateRoute isAuth={isAuth} component={CartPage} />}
-            />
-            <Route
-              path="/login"
-              element={<PublicRoute isAuth={isAuth} component={Login} />}
-            />
-            <Route
-              path="/registration"
-              element={<PublicRoute isAuth={isAuth} component={Registration} />}
-            />
-            <Route path="*" element={<NotFound />} />
-          </Routes>
-        </Suspense>
-      )}
+        {isFetchCurrentUser ? (
+          <Loader />
+        ) : (
+          <Suspense fallback={<Loader />}>
+            <Routes>
+              <Route
+                path="/"
+                element={<PublicRoute isAuth={isAuth} component={HomePage} />}
+              />
+              <Route
+                path="/personal"
+                element={<PrivateRoute isAuth={isAuth} component={Personal} />}
+              />
+              <Route
+                path="/cart"
+                element={<PrivateRoute isAuth={isAuth} component={CartPage} />}
+              />
+              <Route
+                path="/login"
+                element={<PublicRoute isAuth={isAuth} component={Login} />}
+              />
+              <Route
+                path="/registration"
+                element={
+                  <PublicRoute isAuth={isAuth} component={Registration} />
+                }
+              />
+              <Route path="*" element={<NotFound />} />
+            </Routes>
+          </Suspense>
+        )}
+        <Footer />
+      </div>
     </div>
   )
 }

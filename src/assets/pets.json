@@ -1,102 +1,163 @@
 [
   {
-    "id": 0,
-    "image": "https://goodzoo.com.ua/photos/offers/1fe37b820423011eba054bf09780e3b46.jpg",
-    "title": "Djungarian hamster",
-    "genders": ["male","female"],
-    "colors": ["grey","gold","white"],
-    "price": 3,
-    "category": 2,
-    "rating": 10
+   "id": 0,
+   "image": "https://goodzoo.com.ua/photos/offers/1a4cc7da0452a11eba4414bc283a679f2.jpg",
+   "title": "Djungarian hamster",
+   "genders": [
+    "male",
+    "female"
+   ],
+   "colors": [
+    "grey",
+    "gold",
+    "white"
+   ],
+   "price": 3,
+   "category": 2,
+   "rating": 10
   },
   {
-    "id": 1,
-    "image": "https://goodzoo.com.ua/photos/offers/15c5882a0423011eba4414bc283a679f2.jpg",
-    "title": "Syrian hamster",
-    "genders": ["male"],
-    "colors": ["gold","white"],
-    "price": 4,
-    "category": 3,
-    "rating": 9
+   "id": 1,
+   "image": "https://goodzoo.com.ua/photos/offers/1fe37b820423011eba054bf09780e3b46.jpg",
+   "title": "Syrian hamster",
+   "genders": [
+    "male"
+   ],
+   "colors": [
+    "gold",
+    "white"
+   ],
+   "price": 4,
+   "category": 3,
+   "rating": 9
   },
   {
-    "id": 2,
-    "image": "https://goodzoo.com.ua/photos/offers/1a4cc7da0452a11eba4414bc283a679f2.jpg",
-    "title": "Robkovsky's hamster",
-    "genders": ["male","female"],
-    "colors": ["grey","gold","black"],
-    "price": 10,
-    "category": 1,
-    "rating": 7
+   "id": 2,
+   "image": "https://img.freepik.com/premium-photo/hamster-isolated_191971-8311.jpg",
+   "title": "Robkovsky's hamster",
+   "genders": [
+    "male",
+    "female"
+   ],
+   "colors": [
+    "grey",
+    "gold",
+    "black"
+   ],
+   "price": 10,
+   "category": 1,
+   "rating": 7
   },
   {
-    "id":3,
-    "image": "https://goodzoo.com.ua/photos/offers/1fe37b820423011eba054bf09780e3b46.jpg",
-    "title": "Campbell's hamster",
-    "genders": ["female"],
-    "colors": ["grey","white"],
-    "price": 8,
-    "category": 2,
-    "rating": 8
+   "id": 3,
+   "image": "https://img.freepik.com/premium-photo/hamster-having-a-wash-isolated-on-white_191971-24807.jpg?w=900",
+   "title": "Campbell's hamster",
+   "genders": [
+    "female"
+   ],
+   "colors": [
+    "grey",
+    "white"
+   ],
+   "price": 8,
+   "category": 2,
+   "rating": 8
   },
   {
-    "id": 4,
-    "image": "https://goodzoo.com.ua/photos/offers/1a4cc7da0452a11eba4414bc283a679f2.jpg",
-    "title": "Angora hamster",
-    "genders": ["male","female"],
-    "colors": ["grey","gold","white"],
-    "price": 12,
-    "category": 3,
-    "rating": 6
+   "id": 4,
+   "image": "https://img.freepik.com/premium-photo/hamster-isolated_191971-8308.jpg?w=740",
+   "title": "Angora hamster",
+   "genders": [
+    "male",
+    "female"
+   ],
+   "colors": [
+    "grey",
+    "gold",
+    "white"
+   ],
+   "price": 12,
+   "category": 3,
+   "rating": 6
   },
   {
-    "id": 5,
-    "image": "https://goodzoo.com.ua/photos/offers/1fe37b820423011eba054bf09780e3b46.jpg",
-    "title": "Sungur hamster",
-    "genders": ["male","female"],
-    "colors": ["grey","black","white"],
-    "price": 6,
-    "category": 2,
-    "rating": 4
+   "id": 5,
+   "image": "https://img.freepik.com/premium-photo/small-domestic-hamster-isolated-on-white-background_136670-3139.jpg?w=826",
+   "title": "Sungur hamster",
+   "genders": [
+    "male",
+    "female"
+   ],
+   "colors": [
+    "grey",
+    "black",
+    "white"
+   ],
+   "price": 6,
+   "category": 2,
+   "rating": 4
   },
   {
-    "id": 6,
-    "image": "https://goodzoo.com.ua/photos/offers/19dd902c0452a11eba054bf09780e3b46.jpg",
-    "title": "Ordinary hamster",
-    "genders": ["male","female"],
-    "colors": ["grey","gold","white"],
-    "price": 2,
-    "category": 3,
-    "rating": 5
+   "id": 6,
+   "image": "https://goodzoo.com.ua/photos/offers/19dd902c0452a11eba054bf09780e3b46.jpg",
+   "title": "Ordinary hamster",
+   "genders": [
+    "male",
+    "female"
+   ],
+   "colors": [
+    "grey",
+    "gold",
+    "white"
+   ],
+   "price": 2,
+   "category": 3,
+   "rating": 5
   },
   {
-    "id": 7,
-    "image": "https://goodzoo.com.ua/photos/offers/1fe37b820423011eba054bf09780e3b46.jpg",
-    "title": "Chinese hamster",
-    "genders": ["male"],
-    "colors": ["grey","black"],
-    "price": 44,
-    "category": 2,
-    "rating": 3
+   "id": 7,
+   "image": "https://img.freepik.com/premium-photo/european-hamster-cricetus-cricetus-also-known-as-the-black-bellied-hamster_191971-12895.jpg?w=900",
+   "title": "Chinese hamster",
+   "genders": [
+    "male"
+   ],
+   "colors": [
+    "grey",
+    "black"
+   ],
+   "price": 44,
+   "category": 2,
+   "rating": 3
   },
   {
-    "id": 8,
-    "image": "https://goodzoo.com.ua/photos/offers/1a4cc7da0452a11eba4414bc283a679f2.jpg",
-    "title": "Newton's hamster",
-    "genders": ["male","female"],
-    "colors": ["white","black"],
-    "price": 29,
-    "category": 3,
-    "rating": 1
+   "id": 8,
+   "image": "https://img.freepik.com/premium-photo/white-hamster-sitting-isolated-on-white_191971-24840.jpg?w=900",
+   "title": "Newton's hamster",
+   "genders": [
+    "male",
+    "female"
+   ],
+   "colors": [
+    "white",
+    "black"
+   ],
+   "price": 29,
+   "category": 3,
+   "rating": 1
   },
   {
-    "id": 9,
-    "image": "https://goodzoo.com.ua/photos/offers/1fe37b820423011eba054bf09780e3b46.jpg",
-    "title": "Short-tailed hamster",
-    "genders": ["male"],
-    "colors": ["grey","black"],
-    "price": 16,
-    "category": 2,
-    "rating": 2
+   "id": 9,
+   "image": "https://img.freepik.com/premium-photo/small-domestic-hamster-isolated-on-white-background_136670-3287.jpg?w=996",
+   "title": "Short-tailed hamster",
+   "genders": [
+    "male"
+   ],
+   "colors": [
+    "grey",
+    "black"
+   ],
+   "price": 16,
+   "category": 2,
+   "rating": 2
   }
-]
+ ]

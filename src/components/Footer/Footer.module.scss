@@ -1,141 +1,98 @@
 .footer {
-  background-color: #2f303a;
-}
+  margin-top: auto;
+  width: 100wh;
+  color: var(--color-secondary);
+  background-image: url('../../assets//images/hamster-breeds20.jpg');
+  background-size: cover;
 
-.footer__contener {
-  max-width: 100%;
-  padding: 0 15px;
-  margin: 0 auto;
-}
-
-.footer__left-side {
-  margin-bottom: 60px;
-}
-
-.contact__list-city {
-//   @include font(400, 14px, 1.714, center, 0.03em);
-  color: var(--white-color);
-}
-
-.contact__list-link {
-//   @include font(400, 14px, 1.714, center, 0.03em);
-  color: rgba(255, 255, 255, 0.6);
-}
-
-.contact__list-item {
-  text-align: center;
-
-  &:not(:last-child) {
-    margin-bottom: 8px;
+  &__fon {
+    background-color: rgba(172, 19, 19, 0.8);
   }
-}
-
-.footer__center-side {
-  margin-bottom: 60px;
-}
-
-.footer__title {
-  margin-bottom: 20px;
-//   @include font(700, 14px, 1.143, center, 0.03em);
-  text-transform: uppercase;
-  color: var(--white-color);
-}
-
-.footer__right-side {
-  width: 100%;
-  margin: 0 auto;
-}
-
-.footer__form {
-  text-align: center;
-}
-
-.footer__form-email {
-  width: 450px;
-  height: 50px;
-  margin-bottom: 20px;
-  color: var(--white-color);
-  background-color: transparent;
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  border-radius: 4px;
-
-//   @media screen and (max-width: 480px) {
-//     width: 100%;
-//   }
-}
-
-.footer__form-button {
-  width: 24px;
-  height: 24px;
-  margin-left: 10px;
-  fill: var(--white-color);
-}
-
-@media screen and (min-width: 768px) {
-  .footer__contener {
+  &__wrapper {
+    width: calc(100vw - 100px);
+    max-width: 1490px;
     display: flex;
-    flex-wrap: wrap;
-    align-items: baseline;
-    width: 768px;
+    flex-direction: column;
+    margin: 0 auto;
+    padding: 20px 0 20px;
   }
 
-  .footer__left-side {
-    margin-left: 76px;
-    margin-right: 165px;
-  }
-
-  .footer__center-side {
-    margin-right: 0;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .footer__contener {
-    width: 1200px;
-  }
-
-//   .footer__title {
-//     @include font(700, 14px, 1.143, left, 0.03em);
-//   }
-
-  .footer__left-side {
-    width: 231px;
-    margin-left: 0;
-    margin-bottom: 0;
-    margin-right: 70px;
-  }
-
-  .contact__list-item {
-    text-align: left;
-  }
-
-//   .contact__list-city {
-//     @include font(400, 14px, 1.714, left, 0.03em);
-//   }
-
-//   .contact__list-link {
-//     @include font(400, 14px, 1.714, left, 0.03em);
-//   }
-
-  .footer__center-side {
-    min-width: 206px;
-    height: 80px;
-    margin-right: 93px;
-    margin-bottom: 0;
-  }
-
-  .footer__right-side {
-    width: 570px;
-  }
-
-  .footer__form {
+  &__topSide {
     display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    align-items: flex-start;
+  }
+
+  &__leftSide {
+    flex: calc(33.33% - 30px);
+    margin: 30px;
+  }
+
+  &__centerSide {
+    flex: calc(33.33% - 30px);
+    margin: 30px;
+  }
+
+  &__rightSide {
+    flex: calc(33.33% - 30px);
+    margin: 30px;
+  }
+
+  &__title {
+    margin-bottom: 30px;
+    color: var(--color-secondary);
+    text-transform: uppercase;
+  }
+
+  &__text {
+    color: var(--color-light-grey);
+    line-height: 1.6;
+    font-size: 20px;
+  }
+
+  &__image {
+    width: 360px;
+    margin-left: -8px;
+  }
+
+  &__info {
+    display: flex;
+    justify-content: space-between;
+    width: 520px;
+
+    a {
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  &__bottomSide {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
+    margin: 0 auto;
+    padding: 30px 0;
+    background-color: rgba(172, 19, 19);
   }
 
-  .footer__form-email {
-    width: 358px;
-    margin-bottom: 0;
-    margin-right: 12px;
+  &__socialMedia {
+    ul {
+      display: flex;
+    }
+    svg {
+      width: 24px;
+      height: 24px;
+    }
+  }
+
+  li {
+    margin-bottom: 12px;
+    font-size: 20px;
+  }
+  a {
+    color: var(--color-light-grey);
   }
 }

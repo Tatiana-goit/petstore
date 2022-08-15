@@ -2,13 +2,19 @@
 @import './variables';
 @import './components/all';
 
+.main_wrapper{
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
 .wrapper {
   width: calc(100vw - 100px);
   height: 100%;
   background-color: var(--color-secondary);
   margin: 50px auto;
   border-radius: 10px;
-  max-width: 1400px;
+  max-width: 1490px;
 }
 
 .content {
@@ -378,13 +384,7 @@
 .colored-toast .swal2-html-container {
   margin-top: 5px !important;
   margin-bottom: 5px !important;
-
   font-weight: 500 !important;
   font-size: 16px !important;
   color:  rgb(72, 9, 9);
-}
-
-
-.loader {
-text-align: center;
 }

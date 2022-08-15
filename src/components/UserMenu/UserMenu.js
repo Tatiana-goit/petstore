@@ -20,12 +20,12 @@ export default function UserMenu() {
         <Link className={s.link} to="/cart">
           <ButtonCard />
         </Link>
-        <Link className={s.link} to="/personal">
+        {/* <Link className={s.link} to="/personal">
           <span className={s.text}>My Page</span>
-        </Link>
+        </Link> */}
 
         <div className={s.logout__block}>
-          <p className={s.userName}>{userName}</p>
+          <p className={s.userName}>Welcome, {userName}</p>
           <button type="button" onClick={handleLogout} className={s.buttonExit}>
             <ExitToAppIcon />
           </button>

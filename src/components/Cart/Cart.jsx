@@ -23,6 +23,7 @@ export default function Cart() {
   if (totalCount === 0) {
     return <CartEmpty />
   }
+  
   return (
     <div className="wrapper">
       <div className="content">

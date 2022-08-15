@@ -52,7 +52,7 @@ export default function RegistrationForm() {
           value={name}
           placeholder="name"
           onChange={handleChange}
-        />
+          autoComplete="off"      />
         <input
           className={s.input}
           type="email"
@@ -60,6 +60,7 @@ export default function RegistrationForm() {
           value={email}
           placeholder="email"
           onChange={handleChange}
+          autoComplete="off"
         />
         <input
           className={s.input}
@@ -70,6 +71,7 @@ export default function RegistrationForm() {
           title="Password must be at least 8 digits"
           placeholder="password"
           onChange={handleChange}
+          autoComplete="off"
         />
         <button className="button" type="submit">Registration</button>
         <p className={s.text}>

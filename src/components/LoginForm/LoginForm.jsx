@@ -45,6 +45,7 @@ export default function LoginForm() {
           value={email}
           placeholder="email"
           onChange={handleChange}
+          autoComplete="off"
         />
         <input
           className={s.input}
@@ -55,6 +56,7 @@ export default function LoginForm() {
           title="Password must be at least 8 digits"
           placeholder="password"
           onChange={handleChange}
+          autoComplete="off"
         />
 
         <button className="button" type="submit" >Login</button>

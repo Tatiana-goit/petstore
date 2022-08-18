@@ -60,7 +60,6 @@ export default function Footer() {
             </div>
           </div>
         </div>
-
         <div className={s.footer__bottomSide}>
           <div className={s.footer__socialMedia}>
             <ul>
@@ -86,7 +85,6 @@ export default function Footer() {
               </li>
             </ul>
           </div>
-
           <div className={s.footer__info}>
             <div className={s.footer__infoCopyright}>
               Copyright © 2022 | humsters-lviv.ua | All Rights Reserved

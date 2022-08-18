@@ -12,6 +12,7 @@ const Toast = Swal.mixin({
   width: 420,
 });
 
+
 export class Notify {
   static async error(title, text, timer = 2000) {
     await Toast.fire({

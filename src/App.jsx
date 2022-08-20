@@ -1,7 +1,7 @@
 import './scss/app.scss'
 import { Routes, Route } from 'react-router-dom'
 import Navigation from './components/Navigation/Navigation'
-import NotFound from './pages/NotFound/NotFound'
+import NotFound from './pages/NotFoundPage/NotFoundPage'
 import Footer from './components/Footer/Footer'
 
 import { lazy } from 'react'
@@ -23,17 +23,17 @@ const HomePage = lazy(() =>
   import('./pages/HomePage/HomePage' /* webpackChunkName: "homePage" */),
 )
 const Personal = lazy(() =>
-  import('./pages/Personal/Personal' /* webpackChunkName: "personal" */),
+  import('./pages/PersonalPage/PersonalPage' /* webpackChunkName: "personal" */),
 )
 const CartPage = lazy(() =>
   import('./pages/CartPage/CartPage' /* webpackChunkName: "cart" */),
 )
 const Login = lazy(() =>
-  import('./pages/Login/Login' /* webpackChunkName: "login" */),
+  import('./pages/LoginPage/LoginPage' /* webpackChunkName: "login" */),
 )
 const Registration = lazy(() =>
   import(
-    './pages/Registration/Registration'
+    './pages/RegistrationPage/RegistrationPage'
     /* webpackChunkName: "registration" */
   ),
 )

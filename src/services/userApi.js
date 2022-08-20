@@ -12,12 +12,14 @@ const token = {
 
 export async function register(user) {
   const result = await axios.post('/users/signup', user);
+  console.log("register", result);
   token.set(result.data.token);
   return result.data;
 }
 
 export async function login(user) {
   const result = await axios.post('/users/login', user);
+  console.log("login", result);
   token.set(result.data.token);
   return result.data;
 }

@@ -2,12 +2,14 @@ import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { NavLink } from 'react-router-dom';
 import { register } from '../../redux/auth/auth-operation';
+import ModalError from '../ModalError/ModalError';
 import s from './RegistrationForm.module.scss';
 
 export default function RegistrationForm() {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [modalErrorActive, setModalErrorActive]=useState(false)
 
   const dispatch = useDispatch();
 
@@ -81,6 +83,8 @@ export default function RegistrationForm() {
             Login{' '}
           </NavLink>
         </p>
+        <button type="button" className={s.button_error} onClick={()=>setModalErrorActive(true)}>If you have problems with registration</button>
+        {modalErrorActive && <ModalError active={modalErrorActive} setActive={setModalErrorActive}/>}
       </form>
     </>
   );

@@ -10,7 +10,8 @@ export const register = createAsyncThunk(
       Notify.success('You have successfully registered!');
       return result;
     } catch (error) {
-      rejectWithValue(error.message);
+      Notify.error('Incorrect information or problem with server');
+      return rejectWithValue(error.message);
     }
   },
 );

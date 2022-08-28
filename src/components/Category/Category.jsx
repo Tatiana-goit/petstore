@@ -1,7 +1,6 @@
 import React from 'react'
 
-export default function Category({value, onChangeCategory}) {
-
+export default function Category({ value, onChangeCategory }) {
   const categories = ['All', 'small', 'medium', 'large']
 
   return (

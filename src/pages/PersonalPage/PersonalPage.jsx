@@ -3,7 +3,8 @@ import MainContent from '../../components/MainContent/MainContent'
 
 export default function Personal() {
   return (
-    <div><MainContent/></div>
+    <div>
+      <MainContent />
+    </div>
   )
 }
-
